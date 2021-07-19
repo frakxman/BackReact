@@ -6,6 +6,6 @@ const moviesApi = require('./routes/movies');
 
 moviesApi( app );
 
-app.listen(config.port, function() {
-    console.log(`Listening http://localhost:${config.port}`);
+app.listen( config.port, function() {
+    console.log(`Listening http://localhost:${ config.port }`);
 });
