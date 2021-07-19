@@ -39,9 +39,9 @@ function moviesApi( app ) {
 
     // POST Create movie
     router.post("/", async function( req, res, next ) {
-        const { body: movie } = req.body;
+        const { body: movie } = req;
         try {
-            const createMovie = await movieServ.createMovie( movie );
+            const createMovie = await movieServ.createMovie({ movie });
 
             res.status( 201 ).json({
                 data: createMovie,
@@ -57,7 +57,7 @@ function moviesApi( app ) {
         const { id } = req.params;
         const { body: movie } = req.body;
         try {
-            const updateMovie = await movieServ.updateMovie({ id, movie });
+            const updateMovie = await movieServ.updatedMovie({ id, movie });
 
             res.status( 200 ).json({
                 data: updateMovie,
