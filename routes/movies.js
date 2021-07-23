@@ -55,12 +55,12 @@ function moviesApi( app ) {
     // PUT Update movie
     router.put("/:id", async function( req, res, next ) {
         const { id } = req.params;
-        const { body: movie } = req.body;
+        const { body: movie } = req;
         try {
-            const updateMovie = await movieServ.updatedMovie({ id, movie });
+            const updatedMovie = await movieServ.updatedMovie({ id, movie });
 
             res.status( 200 ).json({
-                data: updateMovie,
+                data: updatedMovie,
                 msg: 'movie updated'
             })
         } catch ( err ) {
