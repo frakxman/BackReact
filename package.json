@@ -1,12 +1,13 @@
 {
-  "name": "BackReact",
+  "name": "backreact",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "SET DEBUG=app:* & nodemon index",
     "start": "SET NODE_ENV=production & node index",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -32,8 +33,12 @@
     "eslint-plugin-prettier": "^3.4.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.1",
+    "mocha": "^9.0.2",
     "nodemon": "^2.0.12",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "proxyquire": "^2.1.3",
+    "sinon": "^11.1.1",
+    "supertest": "^6.1.4"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
