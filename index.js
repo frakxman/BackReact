@@ -17,7 +17,6 @@ moviesApi( app );
 // Catch Error 404
 app.use( notFoundHandler );
 
-
 // Errors middleware
 app.use( logErrs );
 app.use( wrapErrs );
