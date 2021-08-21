@@ -9,8 +9,7 @@
     "prepare": "husky install",
     "test": "mocha --exit",
     "cover": "nyc npm run test",
-    "report": "nyc report --reporter=html && cd coverage && index.html",
-    "build": "movies-api build"
+    "report": "nyc report --reporter=html && cd coverage && index.html"
   },
   "repository": {
     "type": "git",
