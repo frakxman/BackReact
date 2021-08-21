@@ -1,0 +1,22 @@
+{
+    "name": "backreact",
+    "version": 2,
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+        "src": "/(.*)",
+        "dest": "/index.js"
+        }
+    ],
+    "env": {
+        "DB_USER": "db_user_reactvideos",
+        "DB_PASSWORD": "79GBgVF3nP7r37e5",
+        "DB_HOST": "reactvideo.z4iex.mongodb.net",
+        "DB_NAME": "reactvideos_db"
+    }
+}
